@@ -9,5 +9,6 @@ const categoryRoutes = express.Router();
 categoryRoutes.use(express.json());
 
 categoryRoutes.post('/', middlewares.addCategoryValidation, categoryController.createCategory);
+categoryRoutes.get('/', categoryController.getCategories);
 
 module.exports = categoryRoutes;
