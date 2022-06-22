@@ -10,6 +10,7 @@ const userRoutes = express.Router();
 userRoutes.use(express.json());
 
 userRoutes.post('/', middlewares.createUserValidation, userController.createUser);
+userRoutes.get('/:id', middlewares.validateToken, userController.getById);
 userRoutes.get('/', middlewares.validateToken, userController.getAll);
 
 module.exports = userRoutes;
