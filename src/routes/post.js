@@ -9,6 +9,7 @@ const postRoutes = express.Router();
 postRoutes.use(express.json());
 
 postRoutes.post('/', middlewares.postValidation, postController.addPost);
+postRoutes.get('/search', postController.searchPost);
 postRoutes.get('/:id', postController.getPostById);
 postRoutes.put('/:id', middlewares.postValidation, postController.editPost);
 postRoutes.delete('/:id', postController.deletetPost);
