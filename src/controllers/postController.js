@@ -24,9 +24,17 @@ const editPost = async (req, res) => {
     res.status(200).json(post);
 };
 
+const deletetPost = async (req, res) => {
+    const { data: email } = req.user;
+    const { id } = req.params;
+    await postService.deletePost(id, email);
+    res.status(204).end();
+};
+
 module.exports = {
     addPost,
     getAllPosts,
     getPostById,
     editPost,
+    deletetPost,
 };

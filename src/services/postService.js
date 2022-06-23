@@ -67,9 +67,25 @@ const editPost = async (id, { title, content }, userEmail) => {
     return post;
 };
 
+const deletePost = async (id, userEmail) => {
+    const post = await BlogPost.findByPk(id, { include: [
+        { model: User, as: 'user', attributes: { exclude: ['password'] } },
+        ],
+    });
+    if (!post) {
+        throw new Error(JSON.stringify({ status: 404, message: 'Post does not exist' }));
+    }
+    const { email } = post.user;
+    if (email !== userEmail) {
+        throw new Error(JSON.stringify({ status: 401, message: 'Unauthorized user' }));
+    } 
+    await BlogPost.destroy({ where: { id } });
+};
+
 module.exports = {
     addPost,
     getAllPosts,
     getPostById,
     editPost,
+    deletePost,
 };
