@@ -13,12 +13,20 @@ const getAllPosts = async (_req, res) => {
 
 const getPostById = async (req, res) => {
     const { id } = req.params;
-    const posts = await postService.getPostById(id);
-    res.status(200).json(posts);
+    const post = await postService.getPostById(id);
+    res.status(200).json(post);
+};
+
+const editPost = async (req, res) => {
+    const { data: email } = req.user;
+    const { id } = req.params;
+    const post = await postService.editPost(id, req.body, email);
+    res.status(200).json(post);
 };
 
 module.exports = {
     addPost,
     getAllPosts,
     getPostById,
+    editPost,
 };

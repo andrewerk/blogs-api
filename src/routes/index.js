@@ -2,7 +2,7 @@ const express = require('express');
 const logintRoutes = require('./login');
 const userRoutes = require('./user');
 const categoryRoutes = require('./category');
-const postRoutes = require('./posts');
+const postRoutes = require('./post');
 const middlewares = require('../middlewares');
 
 const routes = express.Router();
