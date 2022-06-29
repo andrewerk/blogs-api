@@ -15,7 +15,7 @@ const options = {
     `${process.env.MYSQL_DB_NAME || 'blogs-api'}${suffix[environment] || suffix.test}`,
   username: process.env.MYSQL_USER || 'root',
   password: process.env.MYSQL_PASSWORD || '1234',
-  dialect: process.env.DB_DIALECT || 'postgres',
+  dialect: 'postgres',
   dialectOptions: {
     timezone: 'Z',
   },
