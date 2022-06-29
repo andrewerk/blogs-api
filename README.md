@@ -2,15 +2,21 @@
 
 This individual project was developed within Trybe Course. The main goal was to build a CRUD RESTful API for a blog back-end. With this application, you can add new users, login and receive a authentication token for other requests. 
 
+## Read the docs and deploy URL
+
+This API is fully documented with OpenAPI Specification in the url:
+`DEPLOY URL`
+
+
 ## Running locally
 
 To run this application locally, you will need to clone this repository with:
 
-```git clone git@github.com:andrewerk/store-manager.git```
+```git clone git@github.com:andrewerk/blogs-api.git```
 
 Then, just go to the project root with:
 
-```cd store-manager```
+```cd blogs-api```
 
 Finally, build the containers to run the API with docker-compose:
 
@@ -19,11 +25,6 @@ Finally, build the containers to run the API with docker-compose:
 The API will be listening on `http://localhost:3000`! :rocket:
 
 If the images created for this application are removed, when rebuilding the Database will be restored.
-
-## Read the docs
-
-This API is fully documented with OpenAPI Specification in the url:
-`DEPLOY URL`
 
 
 ## Skills developed during this Project
