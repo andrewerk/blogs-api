@@ -7,7 +7,7 @@ require('express-async-errors');
 const app = express();
 
 app.use(express.json());
-app.use('/', swaggerUi.serve, swaggerUi.setup(require('../swagger.json')));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(require('../swagger.json')));
 
 app.use('', routes);
 app.use(middlewares.errorHandler);
