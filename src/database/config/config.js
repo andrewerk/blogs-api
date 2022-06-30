@@ -7,10 +7,6 @@ const options = {
   username: process.env.MYSQL_USER || 'root',
   password: process.env.MYSQL_PASSWORD || '1234',
   dialect: process.env.DB_DIALECT,
-  dialectOptions: {
-    ssl: true,
-    rejectUnauthorized: false,
-  },
   logging: process.env.DEBUG !== 'false',
 };
 
