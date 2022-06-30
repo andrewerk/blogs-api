@@ -7,26 +7,6 @@ This individual project was developed within Trybe Course. The main goal was to 
 This API is fully documented with OpenAPI Specification in the url:
 https://blogs-api-2155.herokuapp.com/docs/
 
-
-## Running locally
-
-To run this application locally, you will need to clone this repository with:
-
-```git clone git@github.com:andrewerk/blogs-api.git```
-
-Then, just go to the project root with:
-
-```cd blogs-api```
-
-Finally, build the containers to run the API with docker-compose:
-
-```docker-compose up -d```
-
-The API will be listening on `http://localhost:3000`! :rocket:
-
-If the images created for this application are removed, when rebuilding the Database will be restored.
-
-
 ## Skills developed during this Project
 
 During this project, we had to apply new knowledge about software backend architecture, especially about MSC (Model - Service - Controller), REST constraints to build a RESTful API, reinforce Node.js and Express concepts, Sequelize ORM and JWT Authentication.
