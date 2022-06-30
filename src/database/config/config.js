@@ -9,6 +9,7 @@ const options = {
   dialect: process.env.DB_DIALECT,
   dialectOptions: {
     ssl: true,
+    rejectUnauthorized: false,
   },
   logging: process.env.DEBUG !== 'false',
 };
