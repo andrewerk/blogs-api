@@ -5,7 +5,7 @@ This individual project was developed within Trybe Course. The main goal was to 
 ## Read the docs and deploy URL
 
 This API is fully documented with OpenAPI Specification in the url:
-`DEPLOY URL`
+https://blogs-api-2155.herokuapp.com/docs/
 
 
 ## Running locally
