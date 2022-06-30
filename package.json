@@ -22,6 +22,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node .",
+    "setdb": "npx sequelize-cli db:create & npx sequelize-cli db:migrate & npx sequelize-cli db:seed:all",
     "start:test": "API_PORT=3030 NODE_ENV=test npm start",
     "kill:test": "kill -9 $(lsof -t -i:3030) &> /dev/null",
     "drop": "npx sequelize-cli db:drop",
