@@ -2,9 +2,10 @@ require('dotenv').config();
 
 const options = {
   host: process.env.HOSTNAME || 'localhost',
-  database: process.env.POSTGRES_DB_NAME,
-  username: process.env.POSTGRES_USER || 'root',
-  password: process.env.POSTGRES_PASSWORD || '1234',
+  port: process.env.MYSQL_PORT || '5432',
+  database: process.env.MYSQL_DB_NAME,
+  username: process.env.MYSQL_USER || 'root',
+  password: process.env.MYSQL_PASSWORD || '1234',
   dialect: process.env.DB_DIALECT,
   logging: process.env.DEBUG !== 'false',
 };
